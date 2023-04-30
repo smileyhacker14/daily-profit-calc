@@ -9,22 +9,6 @@ include 'include/Database.class.php';
 include 'include/Session.class.php';
 include 'include/user.class.php';
 
-// global $__site_config;
-//         $__site_config_path = $_SERVER['DOCUMENT_ROOT'].'/photogramconfig.json';
-//         $__site_config = file_get_contents($__site_config_path);
-
-
-
-// function get_config($key, $default=null)
-// {
-//     global $__site_config;
-//     $array = json_decode($__site_config, true);
-//     if (isset($array[$key])) {
-//         return $array[$key];
-//     } else {
-//         return $default;
-//     }
-// }
 
 
 //this funtion used to load templates//
