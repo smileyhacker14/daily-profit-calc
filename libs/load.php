@@ -11,6 +11,24 @@ include 'include/user.class.php';
 
 
 
+global $__site_config;
+$__site_config_path = $_SERVER['DOCUMENT_ROOT'].'/db_get_config_.json';
+$__site_config = file_get_contents($__site_config_path);
+
+
+
+function get_config($key, $default=null)
+{
+    global $__site_config;
+    $array = json_decode($__site_config, true);
+    if (isset($array[$key])) {
+        return $array[$key];
+    } else {
+        return $default;
+    }
+}
+
+
 //this funtion used to load templates//
 function load_template($name)
 {
