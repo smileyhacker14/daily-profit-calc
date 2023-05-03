@@ -7,10 +7,10 @@ class Database
     public static function getConnection()
     {
         if (Database::$conn == null) {
-            $db_server = 'mysql.selfmade.ninja:3306';
-            $db_user_name = 'shaheel';
-            $db_pass_word = 'shaheelshah';
-            $db_name = 'shaheel_dailyProfit';
+            $db_server = get_config('server');
+            $db_user_name = get_config('username');
+            $db_pass_word = get_config('password');
+            $db_name = get_config('dbname');
 
             $connection = new mysqli($db_server, $db_user_name, $db_pass_word, $db_name);
             if(!$connection->connect_error) {
