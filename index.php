@@ -1,7 +1,7 @@
 <?php include 'libs/load.php';
 
 
-if((Session::authorization($_COOKIE['token']) == $_SESSION['user_id'])) {
+if(Session::authorization($_COOKIE['sessionToken']) == false) {
     ?>
 <script type="text/javascript">
 	window.location.href = "login.php";
