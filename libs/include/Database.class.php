@@ -1,5 +1,5 @@
 <?php
-
+include_once '../load.php';
 class Database
 {
     public static $conn = null;
