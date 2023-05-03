@@ -1,13 +1,14 @@
 
 <?php include 'libs/load.php';
 
-if(empty($_SESSION['user_id'])) {
+if(Session::authorization($_COOKIE['sessionToken']) == false) {
     ?>
-	<script type="text/javascript"> 
-		window.location.href="login.php" ;
-		</script>
-	<?php
+<script type="text/javascript">
+	window.location.href = "login.php";
+</script>
+<?php
 }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
